@@ -1,19 +1,20 @@
 // Return an array without duplicates
 
-// Step 1
-// Format code indentation and spacing
-// Add 'use strict';
+// Step 2
+// Remove unused identifiers
+// Change identifiers case
+// Add `const` and `let`
 
 'use strict';
 
-duplicate = (value, N) => {
+const duplicate = (value, N) => {
     if (N <= 0) return [];
     else {
-        res = [];
+        const result = [];
         for (let i = 0; i < N; i++) {
-            res[i] = value;
+            result[i] = value;
         }
-        return res;
+        return result;
     }
 };
 

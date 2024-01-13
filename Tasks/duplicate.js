@@ -1,17 +1,18 @@
 // Return an array without duplicates
 
-// Step 3
-// Remove senseless blocks
+// Step 4 (final)
+// Don't mutate incoming parameters
+// Change variable name 'N' to 'length'
 
 'use strict';
 
-const duplicate = (value, N) => {
-    if (N <= 0) return [];
+const createArrayWithoutDuplicates = (value, length) => {
+    if (length <= 0) return [];
     const result = [];
-    for (let i = 0; i < N; i++) {
-        result[i] = value;
+    for (let i = 0; i < length; i++) {
+        result.push(value);
     }
     return result;
 };
 
-module.exports = duplicate;
+module.exports = createArrayWithoutDuplicates;

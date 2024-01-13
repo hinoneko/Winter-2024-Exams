@@ -1,21 +1,17 @@
 // Return an array without duplicates
 
-// Step 2
-// Remove unused identifiers
-// Change identifiers case
-// Add `const` and `let`
+// Step 3
+// Remove senseless blocks
 
 'use strict';
 
 const duplicate = (value, N) => {
     if (N <= 0) return [];
-    else {
-        const result = [];
-        for (let i = 0; i < N; i++) {
-            result[i] = value;
-        }
-        return result;
+    const result = [];
+    for (let i = 0; i < N; i++) {
+        result[i] = value;
     }
+    return result;
 };
 
 module.exports = duplicate;

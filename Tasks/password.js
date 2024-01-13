@@ -1,20 +1,20 @@
 // Generate random password
 
-// Step 1
-// Format code indentation and spacing
-// Remove empty blocks
-// Add 'use strict';
+// Step 2
+// Remove unused identifiers
+// Change identifiers case
+// Add `const` and `let`
 
 'use strict';
 
-let GeneratePassword = (alphabet, length) => {
+const generatePassword = (alphabet, length) => {
     const MAX = alphabet.length;
     let key = '';
     for (let i = 0; i < length; i++) {
-        let Index = Math.floor(Math.random() * MAX);
-        key = key + alphabet[Index];
+        const index = Math.floor(Math.random() * MAX);
+        key = key + alphabet[index];
     }
     return key;
 };
 
-module.exports = GeneratePassword;
+module.exports = generatePassword;

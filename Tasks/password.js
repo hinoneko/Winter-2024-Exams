@@ -1,18 +1,20 @@
 // Generate random password
 
-// Step 2
-// Remove unused identifiers
-// Change identifiers case
-// Add `const` and `let`
+// Step 3 (final)
+// Decompose into two functions
+// Remove senseless blocks
+// Rename variable
 
 'use strict';
 
-const generatePassword = (alphabet, length) => {
-    const MAX = alphabet.length;
+const getRandomIndex = (max) => Math.floor(Math.random() * max);
+
+const generatePassword = (alphabet, Length) => {
+    const maxAlphabetLength = alphabet.length;
     let key = '';
-    for (let i = 0; i < length; i++) {
-        const index = Math.floor(Math.random() * MAX);
-        key = key + alphabet[index];
+    for (let i = 0; i < Length; i++) {
+        const index = getRandomIndex(maxAlphabetLength);
+        key += alphabet[index];
     }
     return key;
 };

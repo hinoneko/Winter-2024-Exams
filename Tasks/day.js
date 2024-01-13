@@ -1,22 +1,22 @@
 // Get day number
 
-// Step 1
-// Format code indentation and spacing
-// Remove empty blocks
-// Add 'use strict';
+// Step 2
+// Remove unused identifiers
+// Change identifiers case
+// Add `const` and `let`
 
 'use strict';
 
-let D = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+const DAYS_OF_WEEK = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
-const _parse_day_ = (s) => {
+const parseDay = (s) => {
     let i;
-    for (i = 0; i < D.length; i++) {
-        if (s.startsWith(D[i].toLowerCase())) {
+    for (i = 0; i < DAYS_OF_WEEK.length; i++) {
+        if (s.startsWith(DAYS_OF_WEEK[i].toLowerCase())) {
             return i + 1;
         }
     }
     return -1;
 };
 
-module.exports = _parse_day_;
+module.exports = parseDay;

@@ -1,10 +1,11 @@
 // Get one random element from an array
 
-// Step 2
-// Remove unnecessary variable assignment
+// Step 3 (final)
+// Store random index calculation in a separate variable
 
 const getRandomElement = (arr) => {
-    return arr[Math.floor(Math.random() * arr.length)];
+    const randomIndex = Math.floor(Math.random() * arr.length);
+    return arr[randomIndex];
 };
 
 module.exports = getRandomElement;

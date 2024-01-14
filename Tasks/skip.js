@@ -1,19 +1,10 @@
 // Return an remove without listed values
 
-// Step 1
-// Format code indentation and spacing
-// Change function name to camelCase
-// Use forEach for better readability
-// Avoid modifying the array while iterating over it
+// Step 2 (final)
+// Utilize the filter method to achieve the same result more concisely
 
 const skipValues = (arr, ...remove) => {
-    const result = [];
-    arr.forEach((element) => {
-        if (!remove.includes(element)) {
-            result.push(element);
-        }
-    });
-    return result;
+    return arr.filter((element) => !remove.includes(element));
 };
 
 module.exports = skipValues;

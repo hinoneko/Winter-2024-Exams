@@ -1,17 +1,16 @@
 // Increment all numbers in dictionary
 
-// Step 3 (final)
-// Remove unused parameters and variables (...restVariables)
-// Change the loop variable name to a more descriptive one
+// Step 4 (final)
+// Remove 'for...in'
 
 'use strict';
 
 const incrementNumbers = (inputObject) => {
-    for (const key in inputObject) {
+    Object.keys(inputObject).forEach((key) => {
         if (typeof inputObject[key] === 'number') {
             inputObject[key] += 1;
         }
-    }
+    });
     return inputObject;
 };
 

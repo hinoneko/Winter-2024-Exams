@@ -1,18 +1,19 @@
 // Count types in an array
 
-// Step 2
-// Add 'use strict';
+// Step 3
+// Replace `const` with `let`
+// Add `const`
 
 'use strict';
 
 const countTypes = (inputArray) => {
-    const typeCounts = {
+    let typeCounts = {
         number: 0,
         string: 0,
         boolean: 0,
     };
 
-    for (element of inputArray) {
+    for (const element of inputArray) {
         const type = typeof element;
         typeCounts[type]++;
     }

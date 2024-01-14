@@ -1,23 +1,23 @@
 // Generate int array from given range
 
-// Step 2
-// Use more descriptive variable names
-// Simplify the conditional check
+// Step 3
+// Improve variable names further
+// Use a more concise conditional statement
 
 const generateIntArray = (...inputRange) => {
     let [start, end] = inputRange;
 
-    if (end >= start) {
-        const resultArray = new Array(end - start + 1);
-
-        for (let i = start; i <= end; i++) {
-            resultArray[i - start] = i;
-        }
-
-        return resultArray;
-    } else {
+    if (end < start) {
         return [];
     }
+
+    const resultArray = new Array(end - start + 1);
+
+    for (let i = start; i <= end; i++) {
+        resultArray[i - start] = i;
+    }
+
+    return resultArray;
 };
 
 module.exports = generateIntArray;

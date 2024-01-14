@@ -1,7 +1,9 @@
 // Count types in an array
 
-// Step 1
-// Use more descriptive variable names
+// Step 2
+// Add 'use strict';
+
+'use strict';
 
 const countTypes = (inputArray) => {
     const typeCounts = {

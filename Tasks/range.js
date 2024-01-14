@@ -1,11 +1,10 @@
 // Generate int array from given range
 
-// Step 3
-// Improve variable names further
-// Use a more concise conditional statement
+// Step 4 (final)
+// Use const instead of let for destructuring assignment
 
 const generateIntArray = (...inputRange) => {
-    let [start, end] = inputRange;
+    const [start, end] = inputRange;
 
     if (end < start) {
         return [];

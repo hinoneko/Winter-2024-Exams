@@ -1,24 +1,16 @@
 // Filter array by type name
 
-// Step 1
-// Change the function name to follow camelCase convention
-// Use forEach for better readability
-// Avoid modifying the array while iterating over it
+// Step 2
+// Utilize the map and filter methods to achieve the same result more concisely
 
 'use strict';
 
 const filterArrayByType = (inputArray, typeName) => {
-    const indicesToRemove = [];
+    const indicesToRemove = inputArray
+        .map((element, index) => (typeof element !== typeName ? index : -1))
+        .filter((index) => index !== -1);
 
-    inputArray.forEach((element, index) => {
-        if (typeof element !== typeName) {
-            indicesToRemove.unshift(index);
-        }
-    });
-
-    indicesToRemove.forEach((index) => {
-        inputArray.splice(index, 1);
-    });
+    inputArray = inputArray.filter((element, index) => !indicesToRemove.includes(index));
 
     return inputArray;
 };

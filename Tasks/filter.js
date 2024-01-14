@@ -1,15 +1,24 @@
 // Filter array by type name
 
-Filter = (T, t) => {
-  remove = [];
-  for (C of T) {
-    x = T.indexOf(C);
-    if (typeof T[x] !== t) {
-      remove.unshift(x);
-    }
-  }
-  for (x of remove) T.splice(x, 1);
-  return T;
-};
+// Step 1
+// Change the function name to follow camelCase convention
+// Use forEach for better readability
+// Avoid modifying the array while iterating over it
 
-module.exports = Filter;
+'use strict';
+
+const filterArrayByType = (inputArray, typeName) => {
+    const indicesToRemove = [];
+
+    inputArray.forEach((element, index) => {
+        if (typeof element !== typeName) {
+            indicesToRemove.unshift(index);
+        }
+    });
+
+    indicesToRemove.forEach((index) => {
+        inputArray.splice(index, 1);
+    });
+
+    return inputArray;
+};

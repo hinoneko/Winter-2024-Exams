@@ -1,7 +1,9 @@
 // Generate int array from given range
 
-// Step 4 (final)
-// Use const instead of let for destructuring assignment
+// Step 5 (final)
+// Add 'use strict';
+
+'use strict';
 
 const generateIntArray = (...inputRange) => {
     const [start, end] = inputRange;

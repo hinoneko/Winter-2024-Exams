@@ -1,20 +1,23 @@
 // Generate int array from given range
 
-// Step 1
-// Improve variable names for better readability
-// Change the function name to follow camelCase convention
+// Step 2
+// Use more descriptive variable names
+// Simplify the conditional check
 
-const generateIntArray = (...range) => {
-    let [from, to] = range;
-    if (to >= from) {
-        range = new Array(to - from + 1);
-        for (let i = from; i <= to; i++) {
-            range[i - from] = i;
+const generateIntArray = (...inputRange) => {
+    let [start, end] = inputRange;
+
+    if (end >= start) {
+        const resultArray = new Array(end - start + 1);
+
+        for (let i = start; i <= end; i++) {
+            resultArray[i - start] = i;
         }
+
+        return resultArray;
     } else {
         return [];
     }
-    return range;
 };
 
 module.exports = generateIntArray;

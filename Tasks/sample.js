@@ -1,12 +1,10 @@
 // Get one random element from an array
 
-// Step 1
-// Format code indentation and spacing
-// Change function name to camelCase
+// Step 2
+// Remove unnecessary variable assignment
 
 const getRandomElement = (arr) => {
-    arr = arr[Math.floor(Math.random() * arr.length)];
-    return arr;
+    return arr[Math.floor(Math.random() * arr.length)];
 };
 
 module.exports = getRandomElement;

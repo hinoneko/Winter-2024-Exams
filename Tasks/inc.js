@@ -1,17 +1,18 @@
 // Increment all numbers in dictionary
 
-// Step 1
-// Add 'use strict';
+// Step 2
+// Improve variable names for better readability
+// Avoid using delete as a loop variable name
 
 'use strict';
 
-let inc_numbers = (format_complete, ...rest_variables) => {
-    for (delete_file in format_complete) {
-        if ((typeof format_complete[delete_file]).charAt(0).toUpperCase() === 'N') {
-            format_complete[delete_file] = format_complete[delete_file] + 1;
+const incrementNumbers = (inputObject, ...restVariables) => {
+    for (const key in inputObject) {
+        if (typeof inputObject[key] === 'number') {
+            inputObject[key] += 1;
         }
     }
-    return format_complete;
+    return inputObject;
 };
 
-module.exports = inc_numbers;
+module.exports = incrementNumbers;
